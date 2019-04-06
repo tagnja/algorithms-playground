@@ -8,11 +8,14 @@ int lookup[MAX];
 void _initialize()
 {
 	int i;
-	for (i = 0; i < MAX; i++) {
+	for (i = 0; i < MAX; i++) 
+	{
 		lookup[i] = NIL;
 	}
 }
-int getFibonaciiNumber(int n) {
+
+int getFibonaciiNumber(int n) 
+{
 	if (lookup[n] == NIL)
 	{
 		if (n <= 1)
@@ -23,7 +26,8 @@ int getFibonaciiNumber(int n) {
 	return lookup[n];
 }
 
-int main() {
+int main() 
+{
 	_initialize();
 	unsigned long long n = 1;
 	std::cin >> n;
