@@ -3,8 +3,8 @@ import java.util.Scanner;
 
 public class CoinsBytelandianGoldCoins 
 {
-	static int MAX = 1000000001;
-//	static int MAX = 100;
+//	static int MAX = 1000000001;
+	static int MAX = 100;
 	static int[] dp = new int[MAX];
 	static 
 	{
@@ -35,10 +35,16 @@ public class CoinsBytelandianGoldCoins
 //		System.out.println(solution(13));
 //		System.out.println(solution(2));
 		
+		/*
 		Scanner sc = new Scanner(System.in);
 		while (sc.hasNext())
 		{
 			System.out.println(solution(sc.nextInt()));
+		}
+		*/
+		for (int i=0; i < 50; i++)
+		{
+			System.out.println(solution(i));
 		}
 	}
 }

@@ -31,7 +31,7 @@ int main()
 	_initialize();
 	unsigned long long n = 1;
 	std::cin >> n;
-	n = getFibonaciiNumber(n);
-	std::cout << n;
+	//n = getFibonaciiNumber(n);
+	std::cout << getFibonaciiNumber(n);
 	return 0;
 }
