@@ -9,15 +9,6 @@ int a[R][C];
 
 void _initial()
 {
-	a[0][0] = 1;
-	a[0][1] = 2;
-	a[0][2] = 3;
-	a[1][0] = 4;
-	a[1][1] = 8;
-	a[1][2] = 2;
-	a[2][0] = 1;
-	a[2][1] = 5;
-	a[2][2] = 3;
 	for (int x = 0; x < R;x++)
 	{
 		for (int y = 0; y < C; y++)
@@ -48,7 +39,7 @@ int solution(int arr[R][C], int i, int j)
 	{
 		return arr[0][0];
 	}
-	g++if (dp[i][j] != -1)
+	if (dp[i][j] != -1)
 	{
 		return dp[i][j];
 	}
@@ -59,6 +50,9 @@ int solution(int arr[R][C], int i, int j)
 int main()
 {
 	_initial();
+	int a[R][C] = {{1, 2, 3},
+			  {4, 8, 2},
+			  {1, 5, 3}};
 	std::cout << solution(a, 2,2);
 	return 0;
 }
