@@ -41,6 +41,11 @@ public class AdjMatrixGraph
 		adj[dest][src] = false;
 	}
 	
+	public boolean contains(int src, int dest)
+	{
+		return adj[src][dest];
+	}
+	
 	public void printGraph()
 	{
 		for (int i = 0; i < V; i++)
