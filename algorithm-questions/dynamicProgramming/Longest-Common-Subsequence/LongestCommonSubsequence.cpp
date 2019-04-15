@@ -1,11 +1,8 @@
 #include <iostream>
 using namespace std;
 
-int result = 0;
-int max(int x, int y)
-{
-	return x > y ? x : y;
-}
+int max(int x, int y);
+
 int solution(string X, string Y, int m, int n)
 {
 	if (n == 0 || m == 0)
@@ -22,6 +19,50 @@ int solution(string X, string Y, int m, int n)
 	}
 }
 
+int max(int x, int y)
+{
+	return x > y ? x : y;
+}
+
+/*
+ * TO Check
+ */
+int solution2(string X, string Y, int m, int n)
+{
+	if (m == 0 || n == 0)
+	{
+		return 0;
+	}
+	int result = 0;
+	int i = 0, j = 0;
+	int n1 = X.length(), n2 = Y.length();
+	while (i < n1 && j < n2)
+	{
+		if (X[i] == Y[j])
+		{
+			result++;
+			//cout << X[i] << endl;
+		}
+		else
+		{
+			if (X[i+1] == Y[j])
+			{
+				result++;
+				i++;
+				//cout << X[i] << endl;
+			}
+			else if (X[i] == Y[j+1])
+			{
+				result++;
+				j++;
+				//cout << X[i] << endl;
+			}
+		}
+		i++;
+		j++;
+	}
+	return result;
+}
 
 int main()
 {
