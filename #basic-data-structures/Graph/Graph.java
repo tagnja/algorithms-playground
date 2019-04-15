@@ -1,5 +1,3 @@
-package com.taogen.ds;
-
 import java.util.LinkedList;
 
 /**

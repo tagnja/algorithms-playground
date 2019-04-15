@@ -1,4 +1,3 @@
-package com.taogen.ds;
 
 /**
  * Stack
