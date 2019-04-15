@@ -1,4 +1,9 @@
 
+/**
+ * Worst: T(n) = O(nlogn)
+ * Average: T(n) = O(nlogn)
+ * Best: T(n) = O(nlogn)
+ */
 public class Mergesort
 {
 	static void mergesort(int arr[], int left, int right)

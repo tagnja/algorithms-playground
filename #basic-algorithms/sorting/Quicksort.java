@@ -1,3 +1,10 @@
+
+
+/**
+ * Worst: T(n) = O(n^2)
+ * Average: T(n) = O(nlogn)
+ * Best: T(n) = O(nlogn)
+ */
 public class Quicksort 
 {
 	public static void quicksort(int a[], int left, int right)
