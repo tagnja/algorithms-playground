@@ -3,10 +3,10 @@ package com.taogen.ds;
 /**
  * @Description
  * DoubleLinkedList
- * 	   Node first;
+ *     Node first;
  *     Node last;
- * 	   int size;
- * 	   SingleLinkedList();
+ *     int size;
+ *     SingleLinkedList();
  *     insertFirst();
  *     insertLast();
  *     removeAtPos(int pos);
