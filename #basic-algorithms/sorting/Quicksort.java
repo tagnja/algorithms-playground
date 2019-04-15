@@ -38,13 +38,33 @@ public class Quicksort
 			a[right] = a[i];
 			a[i] = temp;
 		}
-		/*System.out.println("result i: " + (i));
-		for (int m = 0; m < a.length; m++)
-		{
-			System.out.print(a[m] + " ");
-		}
-		System.out.println();*/
 		return i;
+	}
+	public static int partition2(int arr[], int low, int high)
+	{
+		// pivot (Element to be placed at right position)
+	    int pivot = arr[high];  
+	 
+	    int i, j;
+	    i = (low - 1);  // Index of smaller element
+
+	    for (j = low; j <= high- 1; j++)
+	    {
+	        // If current element is smaller than or
+	        // equal to pivot
+	        if (arr[j] <= pivot)
+	        {
+	            i++;    // increment index of smaller element
+	            //swap arr[i] and arr[j]
+	            int t = arr[i];
+	            arr[i] = arr[j];
+	            arr[j] = t;
+	        }
+	    }
+	    //swap arr[i + 1] and arr[high])
+	    arr[high] = arr[i+1];
+	    arr[i+1] = pivot;
+	    return (i + 1);
 	}
 	
 	public static void main(String[] args) 
