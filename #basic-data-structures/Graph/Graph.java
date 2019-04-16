@@ -87,7 +87,7 @@ public class Graph
 	{
 		boolean visited[] = new boolean[V];
 		ArrayDeque<Integer> queue = new  ArrayDeque<Integer>(V);
-		visited[vertex] = true;
+		visited[vertex] = true; // NOTICE. don't ignore this setence.
 		queue.add(vertex);
 		
 		while (! queue.isEmpty())
