@@ -8,6 +8,8 @@ import java.util.*;
  *     addEdge(int src, int dest);
  *     removeEdge(int src, int dest);
  *     printGraph();
+ *     BFS(int vertex);
+ *     DFS(int vertex);
  */
 public class Graph 
 {
@@ -87,7 +89,7 @@ public class Graph
 	{
 		boolean visited[] = new boolean[V];
 		ArrayDeque<Integer> queue = new  ArrayDeque<Integer>(V);
-		visited[vertex] = true; // NOTICE. don't ignore this setence.
+		visited[vertex] = true; // NOTICE. don't ignore this statement.
 		queue.add(vertex);
 		
 		while (! queue.isEmpty())
@@ -101,7 +103,7 @@ public class Graph
 				int n = iterator.next();
 				if (! visited[n])
 				{
-					visited[n] = true; // NOTICE. don't ignore this setence.
+					visited[n] = true; // NOTICE. don't ignore this statement.
 					queue.add(n);					
 				}
 			}
