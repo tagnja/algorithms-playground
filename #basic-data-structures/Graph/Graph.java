@@ -1,4 +1,4 @@
-import java.util.LinkedList;
+import java.util.*;
 
 /**
  * Graph
@@ -24,6 +24,7 @@ public class Graph
 		{
 			adjListArray[i] = new LinkedList<>();
 		}
+		visited = new boolean[V];
 	}
 	
 	void addEdge(int src, int dest)
@@ -65,6 +66,47 @@ public class Graph
 			System.out.println();
 		}
 	}
+	private static boolean visited[];
+	
+	void DFS(int vertex)
+	{
+		System.out.print(vertex + " ");
+		visited[vertex] = true;
+		for (Integer i : adjListArray[vertex])
+		{
+			if (! visited[i])
+			{
+				DFS(i);
+				break;
+			}
+		}
+		return;
+	}
+	
+	void BFS(int vertex)
+	{
+		boolean visited[] = new boolean[V];
+		ArrayDeque<Integer> queue = new  ArrayDeque<Integer>(V);
+		visited[vertex] = true;
+		queue.add(vertex);
+		
+		while (! queue.isEmpty())
+		{
+			int v = queue.poll();
+			System.out.print(v + " ");
+			
+			Iterator<Integer> iterator = adjListArray[v].listIterator();
+			while (iterator.hasNext() )
+			{
+				int n = iterator.next();
+				if (! visited[n])
+				{
+					visited[n] = true; // NOTICE. don't ignore this setence.
+					queue.add(n);					
+				}
+			}
+		}
+	}
 	
 	public static void main(String[] args) 
 	{
@@ -76,9 +118,13 @@ public class Graph
 		graph.addEdge(1, 4); 
 		graph.addEdge(2, 3); 
 		graph.addEdge(3, 4);
-		graph.printGraph();
 		
-		graph.removeEdge(0, 1);
-		graph.printGraph();
+		//graph.printGraph();
+		//graph.removeEdge(0, 1);
+		//graph.printGraph();
+		
+		graph.DFS(0); // 
+		System.out.println(); // 0 1 2 3 4
+		graph.BFS(0); // 0 1 4 2 3
 	}
 }
