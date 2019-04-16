@@ -125,8 +125,8 @@ public class Graph
 		//graph.removeEdge(0, 1);
 		//graph.printGraph();
 		
-		graph.DFS(0); // 
-		System.out.println(); // 0 1 2 3 4
+		graph.DFS(0); // 0 1 2 3 4
+		System.out.println(); 
 		graph.BFS(0); // 0 1 4 2 3
 	}
 }
