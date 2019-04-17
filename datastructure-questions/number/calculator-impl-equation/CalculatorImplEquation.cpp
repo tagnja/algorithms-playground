@@ -1,15 +1,18 @@
 /**
 	1. find all number
-		a-z using:  int isalpha(int c)
-		0-9 using:  int isdigit(int c)
+		a-z judgement:  int isalpha(int c)
+		0-9 judgement:  int isdigit(int c)
 		string length: str.length();
 		string substring: str.substr(int start, int size)
 		string to number: stoi(str);
 	2. calculate
+		int calculate to double: c = a/(double)b;
+	3. output
+		format precision: std::cout << std::setprecision (3) << fixed << 3.14159265358979 << std::endl; and need add head #include <iomanip>
  */
 
 #include <iostream>
-
+#include <iomanip>
 using namespace std;
 
 double solution(string str)
@@ -81,6 +84,6 @@ int main()
 	
 	string str = "";
 	cin >> str;
-	cout << solution(str) << endl;
+	cout << setprecision(3) << fixed << solution(str) << endl;
 	return 0;
 }
