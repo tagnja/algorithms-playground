@@ -103,7 +103,7 @@ public class BinaryTree
 	 *   4   5   6
 	 * result: 1 2 3 4 5 6
 	 */
-	public static void traverseBFS(Node root)
+	public static void traverseLevelOrder(Node root)
 	{
 		int h = height(root);
 		for (int i = 1; i <= h; i++)
@@ -179,7 +179,7 @@ public class BinaryTree
 		System.out.println();
 		traversePostorder(root); //result: 4 5 2 6 3 1
 		System.out.println();
-		traverseBFS(root);
+		traverseLevelOrder(root); // result: 1 2 3 4 5 6
 		System.out.println();
 	}
 }
