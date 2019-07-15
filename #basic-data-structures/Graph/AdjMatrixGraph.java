@@ -46,6 +46,7 @@ public class AdjMatrixGraph
 		return adj[src][dest];
 	}
 	
+	/*
 	public void printGraph()
 	{
 		for (int i = 0; i < V; i++)
@@ -62,6 +63,23 @@ public class AdjMatrixGraph
 			System.out.println();
 		}
 	}
+	*/
+	
+	public void printGraphMatrix()
+	{
+		for (int i = 0; i < V; i++)
+		{
+			for (int j = 0; j < V; j++)
+			{
+				System.out.print(adj[i][j] ? 1 : 0);
+				
+			}
+			System.out.println();
+		}
+		System.out.println();
+		return;
+	}
+	
 	
 	public static void main(String[] args)
 	{
@@ -73,9 +91,9 @@ public class AdjMatrixGraph
 		graph.addEdge(1, 4); 
 		graph.addEdge(2, 3); 
 		graph.addEdge(3, 4);
-		graph.printGraph();
-		
+		graph.printGraphMatrix();
 		graph.removeEdge(0, 1);
-		graph.printGraph();
+		graph.printGraphMatrix();
+		return;
 	}
 }
