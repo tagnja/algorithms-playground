@@ -19,9 +19,15 @@ abroad
 Other
 
 - [PAT](https://www.patest.cn/practice)
-- [LeetCode](http://leetcode.com)
 - [hihoCoder](http://hihocoder.com)
-- [topcoder](https://www.topcoder.com/)
+
+- Prime
+  - [LeetCode](http://leetcode.com)
+
+- Advanced
+  - [codeforces](https://codeforces.com/)
+  - [atcoder](https://atcoder.jp/)
+  - [topcoder](https://www.topcoder.com/)
 
 ### Doc
 
